@@ -1,0 +1,75 @@
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  width: 360px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & figure {
+    margin: 0px;
+    overflow: hidden;
+    border-radius: 4px;
+    aspect-ratio: 1;
+    & a {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      & img {
+        height: 100%;
+        transition: 0.7s;
+      }
+      & img:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  & h3,
+  p {
+    color: var(--third-color);
+  }
+
+  & h3 {
+    font-size: 1.5rem;
+  }
+
+  & .tags-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    & .tag {
+      border-radius: 4px;
+      padding: 4px 8px;
+      background-color: var(--second-color);
+    }
+  }
+
+  & .buttons-section {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8px;
+    & button {
+      font-family: var(--second-font);
+      border: 0;
+      border-radius: 8px;
+      & a {
+        padding: 8px 16px;
+      }
+    }
+    & button:hover {
+      opacity: 60%;
+    }
+
+    & .button-to-github {
+      background-color: var(--accent2-color);
+    }
+    & .button-to-website {
+      background-color: var(--accent1-color);
+    }
+  }
+}

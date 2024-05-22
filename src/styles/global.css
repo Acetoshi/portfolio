@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+
+@import url("./nav.css");
+@import url("./projects.css");
+@import url("./card.css");
+@import url(./header.css);
+
+:root {
+  --primary-color: #000000;
+  --second-color: #202020;
+  --third-color: #e3e2e2;
+
+  --accent1-color:#06d6a0;
+  --accent2-color:#ffd166;
+
+  --primary-font: "Lexend", sans-serif;
+  --second-font: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  font-family: var(--primary-font);
+  font-weight: 200;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+button,
+input,
+a {
+  font-family: var(--second-font);
+  font-weight: 300;
+}

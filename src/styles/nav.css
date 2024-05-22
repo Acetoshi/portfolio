@@ -1,0 +1,40 @@
+nav {
+  --nav-gap: 8px;
+  display: grid;
+  grid-template: 1fr/1fr 1fr 1fr;
+  background-color: var(--primary-color);
+  padding: var(--nav-gap);
+
+  & h2 {
+    grid-column: 2;
+    align-self: center;
+    text-align: center;
+    color: var(--third-color);
+  }
+
+  & ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--nav-gap);
+    color: var(--third-color);
+
+    & button {
+      height: 100%;
+      margin: 0px;
+      background-color: var(--primary-color);
+      color:inherit;
+      border:0px;
+      transition: 100ms;
+    }
+
+    & button:hover {
+      cursor: pointer;
+      color:white;
+    }
+  }
+
+  & ul:hover{
+    color:grey;
+  }
+}
