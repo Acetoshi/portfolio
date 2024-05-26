@@ -11,23 +11,23 @@
     "name": "NaoNow",
     "url": "https://naonow.vercel.app/",
     "repo_url":"https://github.com/Acetoshi/NaoNow",
-    "screenshots": ["/src/assets/screenshots/naonow/naonow1.png"],
-    "description": "Une webapp pour savoir quand sera le prochain tram sur l'agglomération Nantaise",
+    "screenshots": ["./src/assets/screenshots/naonow/naonow1.png"],
+    "description": "Une webapp pour suivre en tremps réel le traffic des tram sur l'agglomération Nantaise",
     "tags":["ReactJS","CSS","LeafletJS","NantesOpenData"]
   },
   {
     "name": "Walter Water",
     "url": "https://walterwater.vercel.app/",
     "repo_url":"https://github.com/Acetoshi/WalterWater",
-    "screenshots": ["/src/assets/screenshots/walterwater/walterwater2.png"],
-    "description": "Une webapp pour localiser les points d'eau et les toilettes proches",
+    "screenshots": ["./src/assets/screenshots/walterwater/walterwater2.png"],
+    "description": "Une webapp pour localiser les points d'eau et les toilettes proches partout dans le monde",
     "tags":["ReactJS","CSS","LeafletJS","OSM Data","GraphQL"]
   },
   {
     "name": "Mister Wild",
     "url": "https://florine-vnt.github.io/Mister_Wild/",
     "repo_url":"https://github.com/florine-vnt/Mister_Wild",
-    "screenshots": ["/src/assets/screenshots/misterwild/misterwild2.jpg"],
+    "screenshots": ["./src/assets/screenshots/misterwild/misterwild2.jpg"],
     "description": "Une webapp qui recense les restaurants et bars autour du Campus Nantais de la WildCodeSchool",
     "tags":["Javascript","HTML","CSS","Gmaps"]
   },

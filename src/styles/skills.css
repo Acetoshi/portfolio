@@ -1,0 +1,24 @@
+.skills-lists-wrapper {
+    display: flex;
+    gap: var(--global-gap);
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    & section {
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap:calc(var(--global-gap)/2);
+
+        & h4{
+            text-align: center;
+        }
+
+        & ul {
+            list-style: circle;
+            margin-left: var(--global-gap);
+        }
+    }
+}

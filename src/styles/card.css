@@ -2,70 +2,57 @@
   border-radius: 16px;
   overflow: hidden;
   background-color: var(--primary-color);
-  
+
   width: 360px;
+  height: 280px;
   padding: 16px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 8px;
-  transition:0.8s;
+  transition: 0.8s;
 
-  & figure {
-    margin: 0px;
-    overflow: hidden;
-    border-radius: 4px;
-    aspect-ratio: 1;
-    & a {
-      display: flex;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
-      & img {
-        height: 100%;
-        transition: 0.7s;
-      }
-      & img:hover {
-        transform: scale(1.1);
-      }
-    }
-  }
-
-  & h3,
-  p {
-    color: var(--third-color);
-  }
-
-  & h3 {
-    font-size: 1.5rem;
-  }
-
-  & .tags-section {
+  & .project-info-section {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 8px;
+    & h3>a,
+    p {
+      color: var(--third-color);
+    }
 
-    & .tag {
-      border-radius: 4px;
-      padding: 4px 8px;
-      background-color: var(--second-color);
+    & h3 {
+      font-size: 1.5rem;
+    }
+
+    & .tags-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      & .tag {
+        border-radius: 4px;
+        padding: 4px 8px;
+        background-color: var(--second-color);
+      }
     }
   }
 
   & .buttons-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 8px;
 
     & button {
       font-family: var(--second-font);
       border: 0;
-      border-radius: 8px;
       opacity: 60%;
+      border-radius: 8px;
+      padding: 8px 0px;
 
       & a {
         padding: 8px 16px;
       }
-      
     }
     & button:hover {
       opacity: 100%;
@@ -80,6 +67,8 @@
   }
 }
 
-.card:hover,.card:focus {
-  box-shadow: rgba(255, 255, 255, 0.3) 0px 13px 27px -8px, rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
+.card:hover,
+.card:focus {
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 13px 27px -8px,
+    rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
 }

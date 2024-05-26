@@ -4,6 +4,9 @@ nav {
   background-color: var(--primary-color);
   padding: var(--nav-gap);
   justify-content: center;
+  position: sticky;
+  top: 0px;
+  z-index:1;
 
   & ul {
     display: flex;

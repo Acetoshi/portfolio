@@ -3,7 +3,8 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:25vh;
+    min-height:25vh;
+    padding:var(--global-gap);
 
     & hgroup {
         max-width: 700px;

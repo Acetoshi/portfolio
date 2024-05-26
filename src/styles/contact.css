@@ -1,0 +1,24 @@
+.contact {
+    background-color: var(--third-color);
+  & ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--global-gap);
+
+    & a {
+      font-family: var(--second-font);
+      color: var(--third-color);
+      background-color: var(--primary-color);
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 16px;
+      transition:0.6s;
+    }
+
+    & a:hover{
+        color: var(--primary-color);
+        background-color: var(--third-color);
+    }
+  }
+}

@@ -1,24 +1,21 @@
 import { useState } from "react";
 
 function Card({ project }) {
-  const [displayedImg, setDisplayedImg] = useState(project.screenshots.length);
   return (
     <article className="card">
-      <figure>
-        <a href={project.url} target="_blank">
-          <img
-            src={project.screenshots[0]}
-            alt={"Capture ecran de" + project.name}
-          />
-        </a>
-      </figure>
-      <h3>{project.name}</h3>
-      <p>{project.description}</p>
+      <section className="project-info-section">
+        <h3>
+          <a href={project.url} target="_blank">
+            {project.name}
+          </a>
+        </h3>
+        <p>{project.description}</p>
 
-      <section className="tags-section">
-        {project.tags.map((tag) => (
-          <p className="tag">{tag}</p>
-        ))}
+        <section className="tags-section">
+          {project.tags.map((tag) => (
+            <p className="tag">{tag}</p>
+          ))}
+        </section>
       </section>
 
       <section className="buttons-section">
