@@ -1,18 +1,17 @@
 .projects {
-  background-color: var(--second-color);
-  --project-cards-gap:32px;
+  background-color: var(--primary-color);
 
   & h2 {
     color: var(--third-color);
     text-align:center;
-    padding-top:var(--project-cards-gap)
+    padding-top:var(--global-gap);
   }
 
   & ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: var(--project-cards-gap);
-    padding: var(--project-cards-gap);
+    gap: var(--global-gap);
+    padding: var(--global-gap);
   }
 }

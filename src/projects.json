@@ -30,5 +30,13 @@
     "screenshots": ["/src/assets/screenshots/misterwild/misterwild2.jpg"],
     "description": "Une webapp qui recense les restaurants et bars autour du Campus Nantais de la WildCodeSchool",
     "tags":["Javascript","HTML","CSS","Gmaps"]
+  },
+  {
+    "name": "C.R.I.T.E.R Prompt",
+    "url": "https://criter-prompt.vercel.app/",
+    "repo_url":"https://github.com/Acetoshi/prompt-generator",
+    "screenshots": ["/src/assets/screenshots/prompt-generator/prompt1.jpg"],
+    "description": "Un outil pédagogique pour apprendre à prompter ChatGPT destiné à des dirigeants dans le cadre d'une journée de formation sur l'IA",
+    "tags":["ReactJS","CSS"]
   }
 ]

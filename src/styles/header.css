@@ -1,11 +1,11 @@
 header{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height:25vh;
 
-
-    & p{
-        max-width: 70%;
+    & hgroup {
+        max-width: 700px;
     }
 }

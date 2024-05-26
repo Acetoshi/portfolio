@@ -9,31 +9,35 @@ function App() {
   return (
     <>
       <nav>
-        <h2>David LE GALL - Portfolio</h2>
         <ul>
           <li>
-            <button role="button">Mes Projets</button>
+            <button role="button">Projets</button>
           </li>
           <li>
-            <button role="button">Mon Parcours</button>
+            <button role="button">Compétences</button>
           </li>
           <li>
-            <button role="button">Me contacter</button>
+            <button role="button">Expériences</button>
+          </li>
+          <li>
+            <button role="button">Contact</button>
           </li>
         </ul>
       </nav>
       <header>
-        <p>
-          Developpeur Web passionné par les défis techniques et la créativité,
-          je suis prêt à apporter ma polyvalence et mon envie d'apprendre à de
-          nouveaux projets web excitants ! Ingénieur mécanique passé par le
-          design industriel, la transition numérique, la facilitation et la
-          vente technique, je me lance dans le développement web React.
-        </p>
+        <hgroup>
+          <h1>Hi, i'm David</h1>
+          <p>
+            Développeur web fort d'une expérience en
+            ingénierie, design industriel et management, je suis prêt à
+            apporter ma curiosité et ma capacité à apprendre à des projets
+            nouveaux.
+          </p>
+        </hgroup>
       </header>
       <main>
         <section className="projects">
-          <h2>Mes projets</h2>
+          <h2>Projets</h2>
           <ul className="projects-list">
             {projects.map((project) => (
               <li key={project.name}>
@@ -41,6 +45,18 @@ function App() {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section className="skills">
+          <h2>Compétences</h2>
+        </section>
+
+        <section className="experience">
+          <h2>Expériences</h2>
+        </section>
+
+        <section className="contact">
+          <h2>Contact</h2>
         </section>
       </main>
     </>

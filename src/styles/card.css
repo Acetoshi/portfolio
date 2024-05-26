@@ -2,11 +2,13 @@
   border-radius: 16px;
   overflow: hidden;
   background-color: var(--primary-color);
+  
   width: 360px;
   padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  transition:0.8s;
 
   & figure {
     margin: 0px;
@@ -51,18 +53,22 @@
 
   & .buttons-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 8px;
+
     & button {
       font-family: var(--second-font);
       border: 0;
       border-radius: 8px;
+      opacity: 60%;
+
       & a {
         padding: 8px 16px;
       }
+      
     }
     & button:hover {
-      opacity: 60%;
+      opacity: 100%;
     }
 
     & .button-to-github {
@@ -72,4 +78,8 @@
       background-color: var(--accent1-color);
     }
   }
+}
+
+.card:hover,.card:focus {
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 13px 27px -8px, rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
 }

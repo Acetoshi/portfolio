@@ -4,6 +4,7 @@
 
 @import url("./nav.css");
 @import url("./projects.css");
+@import url(./experience.css);
 @import url("./card.css");
 @import url(./header.css);
 
@@ -17,6 +18,8 @@
 
   --primary-font: "Lexend", sans-serif;
   --second-font: "Roboto", sans-serif;
+
+  --global-gap:32px;
 }
 
 * {
@@ -56,4 +59,11 @@ input,
 a {
   font-family: var(--second-font);
   font-weight: 300;
+}
+
+.experience,.skills,.contact {
+  padding:var(--global-gap);
+  & h2 {
+    text-align:center;
+  }
 }

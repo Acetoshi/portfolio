@@ -1,16 +1,9 @@
 nav {
   --nav-gap: 8px;
-  display: grid;
-  grid-template: 1fr/1fr 1fr 1fr;
+  display: flex;
   background-color: var(--primary-color);
   padding: var(--nav-gap);
-
-  & h2 {
-    grid-column: 2;
-    align-self: center;
-    text-align: center;
-    color: var(--third-color);
-  }
+  justify-content: center;
 
   & ul {
     display: flex;
