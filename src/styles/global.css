@@ -46,6 +46,18 @@ ul {
   font-weight: 200;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
 ul {
   list-style-type: none;
   padding: 0;

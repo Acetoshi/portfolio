@@ -55,7 +55,7 @@ function App() {
         <Skills />
 
         <section className="experience">
-          <h2>EXPERIENCES</h2>
+          <h2>EXPÉRIENCES</h2>
         </section>
 
         <section className="contact">
