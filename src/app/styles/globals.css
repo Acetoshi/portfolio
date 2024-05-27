@@ -69,7 +69,8 @@ a {
 
 button,
 input,
-a {
+a,
+p {
   font-family: var(--second-font);
   font-weight: 300;
 }

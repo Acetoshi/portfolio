@@ -10,56 +10,6 @@
   justify-content: space-between;
   gap: calc(var(--global-gap) / 8);
   transition: 2.4s;
-
-  & .project-info-section {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--global-gap) / 8);
-
-    & a:hover,
-    a:focus {
-      text-decoration: underline;
-      text-decoration-line: underline;
-      text-underline-offset: 4px;
-    }
-
-    & .tags-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-
-      & .tag {
-        border-radius: 4px;
-        padding: 4px 8px;
-        background-color: var(--second-color);
-      }
-    }
-  }
-  & .buttons-section {
-    display: flex;
-    justify-content: space-around;
-
-    & a {
-      border: 0px;
-      opacity: 70%;
-      border-radius: 8px;
-      padding: 8px 16px;
-      transition: 0.3s;
-      color: var(--primary-color);
-    }
-
-    & a:hover {
-      opacity: 100%;
-    }
-
-    & .link-to-github {
-      background-color: var(--accent2-color);
-    }
-
-    & .link-to-website {
-      background-color: var(--accent1-color);
-    }
-  }
 }
 
 .card:hover,
@@ -67,4 +17,55 @@
   box-shadow: rgba(255, 255, 255, 0.3) 0px 8px 64px -8px,
     rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
   transition: 0.6s;
+}
+
+.project-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--global-gap) / 8);
+
+  & a:hover,
+  a:focus {
+    text-decoration: underline;
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+  }
+
+  & .tags-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    & .tag {
+      border-radius: 4px;
+      padding: 4px 8px;
+      background-color: var(--second-color);
+    }
+  }
+}
+
+.buttons-section {
+  display: flex;
+  justify-content: space-around;
+
+  & a {
+    border: 0px;
+    opacity: 70%;
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: 0.3s;
+    color: var(--primary-color);
+  }
+
+  & a:hover {
+    opacity: 100%;
+  }
+
+  & .link-to-github {
+    background-color: var(--accent2-color);
+  }
+
+  & .link-to-website {
+    background-color: var(--accent1-color);
+  }
 }
