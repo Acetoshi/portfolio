@@ -31,7 +31,7 @@ export default function Home() {
           <h2>CONTACT</h2>
           <ul>
             <li>
-              <a href="https://github.com/Acetoshi" target="_blank">
+              <a href="https://www.linkedin.com/in/davidlegall/" target="_blank">
                 LINKEDIN
               </a>
             </li>
