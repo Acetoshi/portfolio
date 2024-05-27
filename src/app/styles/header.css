@@ -5,7 +5,6 @@ header {
   align-items: center;
   min-height: 100svh;
   padding: var(--global-gap);
-  background-color: var(--third-color);
 
   & hgroup {
     max-width: 700px;
