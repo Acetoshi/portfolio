@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: var(--global-gap);
-    max-width: 1200px;
+    gap:  var(--global-gap) calc(var(--global-gap)/2);
+    max-width: 1300px;
   }
 }

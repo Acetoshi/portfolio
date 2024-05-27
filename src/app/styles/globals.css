@@ -22,7 +22,7 @@
   --primary-font: "Lexend", sans-serif;
   --second-font: "Roboto", sans-serif;
 
-  --global-gap:32px;
+  --global-gap:64px;
 }
 
 * {

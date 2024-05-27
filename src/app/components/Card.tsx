@@ -1,6 +1,13 @@
-import { useState } from "react";
+type Project =  {
+    "name": string;
+    "url": string;
+    "repo_url": string;
+    "description": string;
+    "tags":string[];
+  };
 
-function Card({ project }) {
+export default function Card( { project }: { project: Project}) {
+
   return (
     <article className="card">
       <section className="project-info-section">
@@ -13,7 +20,7 @@ function Card({ project }) {
 
         <section className="tags-section">
           {project.tags.map((tag) => (
-            <p className="tag">{tag}</p>
+            <p key={`${project.name}-${tag}`}className="tag">{tag}</p>
           ))}
         </section>
       </section>
@@ -33,4 +40,3 @@ function Card({ project }) {
     </article>
   );
 }
-export default Card;

@@ -7,7 +7,7 @@ export default function Skills() {
           <h3>RELATIONNELLES</h3>
           <ul>
             <li>Adaptabilité & Flexibilité</li>
-            <li>Forte curiosité et Goût pour l'apprentissage</li>
+            <li>Forte curiosité et Goût pour l&apos;apprentissage</li>
             <li>Communication assertive & <br /> Remise en question</li>
             <li>Résolution méthodique de problèmes, Esprit analytique,<br /> Autonomie dans la recherche de solutions</li>
             <li>Anglais courant TOEIC 945</li>
@@ -26,7 +26,7 @@ export default function Skills() {
             <li>Veille technique variée</li>
             <li>Microsoft PowerApps, VBA</li>
             <li>Conception mécanique 3D</li>
-            <li>Windows, Arch linux, Debian</li>
+            <li>Windows, Arch Linux, Debian</li>
           </ul>
         </section>
       </section>
