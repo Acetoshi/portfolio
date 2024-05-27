@@ -40,6 +40,11 @@ export default function Home() {
                 GITHUB
               </a>
             </li>
+            <li>
+              <a href="https://www.codewars.com/users/Acetoshi" target="_blank">
+                CODEWARS
+              </a>
+            </li>
           </ul>
         </section>
     
