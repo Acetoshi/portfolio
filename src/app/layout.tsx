@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "David LE GALL - Portfolio",
-  description: "Hi, i'm David, a web devellopper looking for a job :)",
+  description:
+    "Développeur web fort d'une expérience en ingénierie, design industriel et management, je suis prêt à apporter ma curiosité et mes compétences à des projets nouveaux.",
 };
 
 export default function RootLayout({
