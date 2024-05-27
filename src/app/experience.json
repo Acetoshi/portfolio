@@ -1,0 +1,32 @@
+[
+  {
+    "company": "PRIME ENGINEERING",
+    "jobTitle": "INGénieur d'affaires puis responsable de département",
+    "duration": "2,5 ans",
+    "jobDescription": [
+      "Prospection et entretien d’un portefeuille de grands comptes partant de zéro ( CA >2 M€ )",
+      "Négociation et vente de prestations intellectuelles",
+      "Recrutement et suivi de carrière des collaborateurs",
+      "Management d'une équipe de 15 consultants",
+      "Développement et déploiement d’outils de productivité à destination des commerciaux."
+    ]
+  },
+  {
+    "company": "SC21/LECHAUDRON.IO",
+    "jobTitle": "FAcilitateur, CONSULTANT transition numérique",
+    "duration": "2 ans",
+    "jobDescription": [
+      "Gestion courante du fonctionnement du FabLab zBis, Gestion de projets, relation clients",
+      "Formation des clients à l'utilisation de machines à commande numérique et techniques de créativité"
+    ]
+  },
+  {
+    "company": "Ecole Sup. D'ARTS de BRetagne",
+    "jobTitle": "Ingénieur et Designer objets connectés",
+    "duration": "6 mois",
+    "jobDescription": [
+      "Conception et prototypage d'objets connectés en vue d'une installation culturelle à Rennes : Ouverture du couvent des Jacobins",
+      "Intéragtion de systèmes électroniques embarqués, prototypage rapide"
+    ]
+  }
+]
