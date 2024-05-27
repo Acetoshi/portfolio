@@ -79,9 +79,11 @@ a {
 .experience,.skills,.contact,.projects {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: var(--global-gap);
   padding:var(--global-gap);
+  min-height: 100svh;
   & h2 {
     text-align:center;
   }

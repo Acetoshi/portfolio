@@ -1,13 +1,15 @@
 import NavBar from "./components/NavBar";
 import Skills from "./components/Skills";
-import Projects from "./components/Projects"
+import Projects from "./components/Projects";
+import Job from "./components/Job";
+
+import experience from "./experience.json";
 
 export default function Home() {
   return (
     <>
       <NavBar />
       <main>
-
         <header>
           <hgroup>
             <h1>Hi, i&apos;m David. :D</h1>
@@ -25,13 +27,23 @@ export default function Home() {
 
         <section className="experience">
           <h2>EXPÉRIENCES</h2>
+          <ul>
+            {experience.map((job) => (
+              <li key={job.jobTitle}>
+                <Job job={job} />
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section className="contact">
           <h2>CONTACT</h2>
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/davidlegall/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/davidlegall/"
+                target="_blank"
+              >
                 LINKEDIN
               </a>
             </li>
@@ -47,7 +59,6 @@ export default function Home() {
             </li>
           </ul>
         </section>
-    
       </main>
     </>
   );

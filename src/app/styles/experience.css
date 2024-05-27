@@ -1,6 +1,25 @@
 .experience {
   background-color: var(--primary-color);
+  color: var(--third-color);
   & h2 {
     color: var(--third-color);
+  }
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--global-gap);
+
+    & .job-card {
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--global-gap) / 8);
+
+      & ul {
+        max-width: 700px;
+        gap: calc(var(--global-gap) / 8);
+        margin-left: calc(var(--global-gap) / 4);
+        list-style: circle;
+      }
+    }
   }
 }
