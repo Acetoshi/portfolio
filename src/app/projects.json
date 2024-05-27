@@ -33,5 +33,12 @@
     "repo_url":"https://github.com/Acetoshi/prompt-generator",
     "description": "Un outil pédagogique pour apprendre à prompter ChatGPT destiné à des dirigeants dans le cadre d'une journée de formation sur l'IA",
     "tags":["ReactJS","CSS"]
+  },
+  {
+    "name": "Portfolio",
+    "url": "https://davidlegall.vercel.app/",
+    "repo_url":"https://github.com/Acetoshi/portfolio",
+    "description": "Le portfolio sur lequel vous êtes en ce moment",
+    "tags":["NextJS","SSR","TypeScript","CSS"]
   }
 ]
