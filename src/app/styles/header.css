@@ -1,12 +1,45 @@
-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height:95svh;
-    padding:var(--global-gap);
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  padding: var(--global-gap);
+  background-color: var(--third-color);
 
-    & hgroup {
-        max-width: 700px;
+  & hgroup {
+    max-width: 700px;
+    & p {
+      background-color: var(--third-color);
+      position: relative;
+      z-index: 1;
+      padding-bottom: 20px;
     }
+    & h1 {
+      animation-name: slideUp;
+      animation-duration: 1.5s;
+      position: relative;
+      z-index: 0;
+    }
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(60px);
+    opacity: 0%;
+  }
+  75% {
+    transform: translateY(60px);
+    opacity: 0%;
+  }
+  76% {
+    opacity: 100%;
+  }
+  90% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
