@@ -10,19 +10,28 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 8px;
-  transition: 0.8s;
+  transition: 2.4s;
 
   & .project-info-section {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    & h3>a,
+    & h3 > a,
     p {
       color: var(--third-color);
     }
 
     & h3 {
       font-size: 1.5rem;
+
+      & a {
+        transition: 0.3s;
+      }
+
+      & a:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
     }
 
     & .tags-section {
@@ -43,25 +52,22 @@
     justify-content: space-around;
     padding-top: 8px;
 
-    & button {
+    & a {
       font-family: var(--second-font);
       border: 0;
-      opacity: 60%;
+      opacity: 70%;
       border-radius: 8px;
-      padding: 8px 0px;
-
-      & a {
-        padding: 8px 16px;
-      }
+      padding: 8px 16px;
+      transition: 0.3s;
     }
-    & button:hover {
+    & a:hover {
       opacity: 100%;
     }
 
-    & .button-to-github {
+    & .link-to-github {
       background-color: var(--accent2-color);
     }
-    & .button-to-website {
+    & .link-to-website {
       background-color: var(--accent1-color);
     }
   }
@@ -69,6 +75,7 @@
 
 .card:hover,
 .card:focus {
-  box-shadow: rgba(255, 255, 255, 0.3) 0px 13px 27px -8px,
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 8px 64px -8px,
     rgba(255, 255, 255, 0.3) 0px 8px 16px -8px;
+    transition: 0.6s;
 }
