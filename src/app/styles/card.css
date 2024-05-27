@@ -1,15 +1,14 @@
 .card {
-  border-radius: 16px;
+  border-radius: calc(var(--global-gap) / 4);
   overflow: hidden;
   background-color: var(--primary-color);
-
   width: 360px;
   height: 280px;
-  padding: 16px;
+  padding: calc(var(--global-gap) / 4);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: calc(var(---global-gap) / 8);
+  gap: calc(var(--global-gap) / 8);
   transition: 2.4s;
 
   & .project-info-section {
@@ -20,9 +19,9 @@
     & a:hover,
     a:focus {
       text-decoration: underline;
+      text-decoration-line: underline;
       text-underline-offset: 4px;
     }
-  }
 
     & .tags-section {
       display: flex;
@@ -36,20 +35,19 @@
       }
     }
   }
-
   & .buttons-section {
     display: flex;
     justify-content: space-around;
 
     & a {
-      font-family: var(--second-font);
-      border: 0;
+      border: 0px;
       opacity: 70%;
       border-radius: 8px;
       padding: 8px 16px;
       transition: 0.3s;
       color: var(--primary-color);
     }
+
     & a:hover {
       opacity: 100%;
     }
@@ -57,6 +55,7 @@
     & .link-to-github {
       background-color: var(--accent2-color);
     }
+
     & .link-to-website {
       background-color: var(--accent1-color);
     }
