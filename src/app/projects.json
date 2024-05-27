@@ -40,5 +40,12 @@
     "repo_url":"https://github.com/Acetoshi/portfolio",
     "description": "Le portfolio sur lequel vous êtes en ce moment",
     "tags":["NextJS","SSR","TypeScript","CSS"]
+  },
+  {
+    "name": "Timer",
+    "url": "http://wikifab.org/wiki/Timer_:_Un_minuteur_%C3%A0_base_d%27Arduino",
+    "repo_url":"https://github.com/Acetoshi/Timer/blob/master/Timer_code.ino",
+    "description": "Un projet pédagogique utilisé pendant un atelier de découverte de l'électronique de 3 jours chez le client SKF.",
+    "tags":["C++","Arduino","DIY Electronics","Documentation"]
   }
 ]

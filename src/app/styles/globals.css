@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
 
 @import url("./nav.css");
 @import url("./header.css");
@@ -10,19 +9,18 @@
 @import url("./skills.css");
 @import url("./contact.css");
 
-
 :root {
   --primary-color: #000000;
   --second-color: #202020;
   --third-color: #e3e2e2;
 
-  --accent1-color:#06d6a0;
-  --accent2-color:#ffd166;
+  --accent1-color: #06d6a0;
+  --accent2-color: #ffd166;
 
   --primary-font: "Lexend", sans-serif;
   --second-font: "Roboto", sans-serif;
 
-  --global-gap:64px;
+  --global-gap: 64px;
 }
 
 * {
@@ -64,9 +62,9 @@ ul {
 }
 
 a {
-  text-decoration: none;
-  color: black;
+  color: var(--third-color);
   font-size: 1.2rem;
+  text-decoration: none;
 }
 
 button,
@@ -76,15 +74,30 @@ a {
   font-weight: 300;
 }
 
-.experience,.skills,.contact,.projects {
+.experience,
+.skills,
+.contact,
+.projects {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: var(--global-gap);
-  padding:var(--global-gap);
+  padding: var(--global-gap);
   min-height: 100svh;
   & h2 {
-    text-align:center;
+    text-align: center;
   }
+}
+
+.projects,
+.experience {
+  background-color: var(--primary-color);
+  color: var(--third-color);
+}
+
+header,
+.contact,
+.skills {
+  background-color: var(--third-color);
 }
