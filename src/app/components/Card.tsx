@@ -27,11 +27,11 @@ export default function Card({ project }: { project: Project }) {
       </section>
 
       <section className="buttons-section">
-        <a className="link-to-website" href={project.url} target="_blank">
-          Voir le site
-        </a>
         <a className="link-to-github" href={project.repo_url} target="_blank">
-          Voir le code
+          VOIR LE CODE
+        </a>
+        <a className="link-to-website" href={project.url} target="_blank">
+          VOIR L'APP
         </a>
       </section>
     </article>

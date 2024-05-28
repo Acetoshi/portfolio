@@ -17,11 +17,14 @@
         }
 
         & ul {
+            font-family: var(--second-font);
+            font-weight: 375;
             list-style: circle;
             margin-left: calc(var(--global-gap)/4);
             display: flex;
             flex-direction: column;
             gap:calc(var(--global-gap)/8);
+            opacity:50%;
         }
     }
 }

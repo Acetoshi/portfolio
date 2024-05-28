@@ -10,17 +10,18 @@
 
       & a {
         font-family: var(--second-font);
-        color: var(--third-color);
-        background-color: var(--primary-color);
-        border: 0;
+        color: var(--primary-color);
         border-radius: 8px;
         padding: 8px 16px;
+        opacity:75%;
+      transition: 0.3s;
       }
 
       & a:hover,
       a:focus {
         text-decoration: underline;
         text-underline-offset: 4px;
+        opacity:100%;
       }
     }
   }
