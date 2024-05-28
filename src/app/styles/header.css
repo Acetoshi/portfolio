@@ -17,12 +17,15 @@ header {
       }
 
       & .title-hi {
+        animation-name: slideUp;
         animation-duration: 1.5s;
       }
       & .title-name {
+        animation-name: slideUp;
         animation-duration: 2s;
       }
       & .title-smiley {
+        animation-name: slideUpDelayed;
         animation-duration: 3s;
       }
     }
@@ -54,3 +57,24 @@ header {
     transform: translateY(0px);
   }
 }
+
+@keyframes slideUpDelayed {
+  0% {
+    transform: translateY(60px);
+    opacity: 0%;
+  }
+  83% {
+    transform: translateY(60px);
+    opacity: 0%;
+  }
+  84% {
+    opacity: 100%;
+  }
+  95% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
