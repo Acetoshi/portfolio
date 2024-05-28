@@ -31,7 +31,7 @@ export default function Card({ project }: { project: Project }) {
           VOIR LE CODE
         </a>
         <a className="link-to-website" href={project.url} target="_blank">
-          VOIR L'APP
+          VOIR L&apos;APP
         </a>
       </section>
     </article>
