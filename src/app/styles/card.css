@@ -57,7 +57,7 @@
     color: var(--primary-color);
   }
 
-  & a:hover {
+  & a:hover, a:focus{
     opacity: 100%;
   }
 
