@@ -1,14 +1,25 @@
 "use client";
-
+import { useState } from "react";
 export default function NavBar() {
-    
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
   function ScrollToSection(sectionClassName: string) {
     const section = document.getElementsByClassName(sectionClassName)[0];
     section.scrollIntoView({ behavior: "smooth" });
+    setTimeout(()=>toggleMenu(),600);
+  }
+
+  function toggleMenu() {
+    setIsCollapsed(() => !isCollapsed);
   }
 
   return (
-    <nav>
+    <nav className={isCollapsed ? "collapsed" : ""}>
+      <button role="button" className="nav-menu-button" onClick={toggleMenu}>
+        <div className="nav-menu-button-top-bar"></div>
+        <div className="nav-menu-button-middle-bar"></div>
+        <div className="nav-menu-button-bottom-bar"></div>
+      </button>
       <ul>
         <li>
           <button role="button" onClick={() => ScrollToSection("projects")}>
