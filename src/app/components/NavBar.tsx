@@ -6,6 +6,7 @@ export default function NavBar() {
   function ScrollToSection(sectionClassName: string) {
     const section = document.getElementsByClassName(sectionClassName)[0];
     section.scrollIntoView({ behavior: "smooth" });
+    setTimeout(()=>toggleMenu(),600);
   }
 
   function toggleMenu() {
