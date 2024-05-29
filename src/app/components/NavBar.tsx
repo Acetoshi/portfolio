@@ -15,9 +15,9 @@ export default function NavBar() {
   return (
     <nav className={isCollapsed ? "collapsed" : ""}>
       <button role="button" className="nav-menu-button" onClick={toggleMenu}>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className="nav-menu-button-top-bar"></div>
+        <div className="nav-menu-button-middle-bar"></div>
+        <div className="nav-menu-button-bottom-bar"></div>
       </button>
       <ul>
         <li>

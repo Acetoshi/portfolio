@@ -43,32 +43,63 @@ nav {
 
 @media screen and (max-width: 800px) {
   /* put your CSS here */
-nav {
-  position: fixed;
-  width:unset;
-  top:8px;
-  right:8px;
-  flex-direction: column;
-  border-radius:8px;
-
-  & ul {
+  nav {
+    position: fixed;
+    width: unset;
+    top: 8px;
+    right: 8px;
     flex-direction: column;
-  }
-}
+    align-items: flex-end;
+    border-radius: 8px;
+    padding: 16px;
+    transition: 0.6s;
+    gap: calc(var(--global-gap) / 3);
 
+    & ul {
+      flex-direction: column;
+    }
+  }
 
   .nav-menu-button {
     display: flex;
     flex-direction: column;
-    gap:8px;
+    justify-content: space-between;
+    background-color: transparent;
+    border: 0px;
+    height: 42px;
 
-    & div{
-      width:64px;
+    & div {
+      transition-duration: 0.3s;
+      width: 48px;
       height: 8px;
-      color: green;
+      border-radius: 4px;
+      background-color: var(--third-color);
+    }
+
+    & div.nav-menu-button-top-bar {
+      transform: translate(0px, 17px) rotate(45deg);
+    }
+    & div.nav-menu-button-bottom-bar {
+      transform: translate(0px, -17px) rotate(-45deg);
+    }
+    & div.nav-menu-button-middle-bar {
+      width: 0px;
     }
   }
-  .collapsed > ul {
-    display: none;
+
+  .collapsed {
+    & .nav-menu-button {
+
+      & div.nav-menu-button-top-bar,
+      .nav-menu-button-middle-bar,
+      .nav-menu-button-bottom-bar {
+        width: 48px;
+        transform: unset;
+      }
+    }
+
+    & ul {
+      display: none;
+    }
   }
 }
