@@ -1,0 +1,17 @@
+.accent-action-button {
+  & a {
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+    border: 0px;
+    opacity: 70%;
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: 0.3s;
+  }
+
+  & a:hover,
+  a:focus {
+    opacity: 100%;
+    text-underline-offset: 4px;
+  }
+}

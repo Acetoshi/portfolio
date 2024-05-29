@@ -1,5 +1,5 @@
 nav {
-  width:100vw;
+  width: 100vw;
   --nav-gap: 8px;
   display: flex;
   background-color: var(--primary-color);
@@ -7,7 +7,7 @@ nav {
   justify-content: center;
   position: fixed;
   top: 0px;
-  z-index:2;
+  z-index: 2;
 
   & ul {
     display: flex;
@@ -20,19 +20,55 @@ nav {
       height: 100%;
       margin: 0px;
       background-color: var(--primary-color);
-      color:inherit;
-      border:0px;
+      color: inherit;
+      border: 0px;
       transition: 100ms;
       font-size: 1.25rem;
     }
 
     & button:hover {
       cursor: pointer;
-      color:white;
+      color: white;
     }
   }
 
-  & ul:hover{
-    color:grey;
+  & ul:hover {
+    color: grey;
+  }
+}
+/* no need to display the burger menu on desktop */
+.nav-menu-button {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  /* put your CSS here */
+nav {
+  position: fixed;
+  width:unset;
+  top:8px;
+  right:8px;
+  flex-direction: column;
+  border-radius:8px;
+
+  & ul {
+    flex-direction: column;
+  }
+}
+
+
+  .nav-menu-button {
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+
+    & div{
+      width:64px;
+      height: 8px;
+      color: green;
+    }
+  }
+  .collapsed > ul {
+    display: none;
   }
 }
