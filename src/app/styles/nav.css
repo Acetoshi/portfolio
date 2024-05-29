@@ -54,7 +54,6 @@ nav {
     padding: 16px;
     transition: 0.6s;
     gap: calc(var(--global-gap) / 3);
-    mix-blend-mode: difference;
 
     & ul {
       flex-direction: column;
@@ -76,7 +75,6 @@ nav {
       height: 8px;
       border-radius: 4px;
       background-color: var(--third-color);
-      
     }
 
     & div.nav-menu-button-top-bar {
@@ -91,9 +89,9 @@ nav {
   }
 
   .collapsed {
-    /* background-color: transparent; */
+    background-color: transparent;
+    mix-blend-mode: difference;
     & .nav-menu-button {
-
       & div.nav-menu-button-top-bar,
       .nav-menu-button-middle-bar,
       .nav-menu-button-bottom-bar {
