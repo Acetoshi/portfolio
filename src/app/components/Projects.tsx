@@ -3,7 +3,6 @@ import Card from "./Card";
 import projects from "../projects.json"
 
 export default function Projects() {
-    console.log(projects)
   return (
     <section className="projects">
       <h2>PROJETS</h2>
