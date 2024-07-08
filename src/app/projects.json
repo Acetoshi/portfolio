@@ -1,51 +1,65 @@
 [
   {
+    "name": "WattMap",
+    "url": "https://github.com/WildCodeSchool-2024-02/JS-Nantes-RamCSS-P3-WattMap",
+    "repo_url": "https://github.com/WildCodeSchool-2024-02/JS-Nantes-RamCSS-P3-WattMap",
+    "description": "Une plateforme de réservation de bornes de recharge pour véhicule électriques. 4 développeurs",
+    "tags": ["CRUD", "FullStack", "ExpressJS", "ReactJS", "CSS"]
+  },
+  {
+    "name": "Équitalent",
+    "url": "https://equitalent.vercel.app/",
+    "repo_url": "https://github.com/Acetoshi/Equitalent",
+    "description": "Un outil pour évaluer les biais d'inclusion dans les équipes RH et communiquer les bonnes pratiques, réalisé en hackathon de deux jours. 2 designers, 2 data analists, 2 développeurs",
+    "tags": ["Angular", "CSS", "TypeScript"]
+  },
+  {
     "name": "greenDoor",
     "url": "https://greendoor-eight.vercel.app/",
-    "repo_url":"https://github.com/Acetoshi/GreenDoor",
-    "description": "Trouver la plante d'intérieur qui vous correspond et apprendre à en prendre soin.",
-    "tags":["ReactJS","CSS"]
+    "repo_url": "https://github.com/Acetoshi/GreenDoor",
+    "description": "Trouver la plante d'intérieur qui vous correspond et apprendre à en prendre soin. 4 développeurs, 1 mois",
+    "tags": ["ReactJS", "CSS"]
   },
   {
     "name": "NaoNow",
     "url": "https://naonow.vercel.app/",
-    "repo_url":"https://github.com/Acetoshi/NaoNow",
+    "repo_url": "https://github.com/Acetoshi/NaoNow",
     "description": "Suivre en temps réel le traffic des trams sur l'agglomération Nantaise",
-    "tags":["ReactJS","CSS","LeafletJS","NantesOpenData"]
+    "tags": ["ReactJS", "CSS", "LeafletJS", "NantesOpenData"]
   },
   {
     "name": "Walter Water",
     "url": "https://walterwater.vercel.app/",
-    "repo_url":"https://github.com/Acetoshi/WalterWater",
+    "repo_url": "https://github.com/Acetoshi/WalterWater",
     "description": "Localiser les points d'eau et les toilettes proches partout dans le monde",
-    "tags":["ReactJS","CSS","LeafletJS","OSM Data","GraphQL"]
+    "tags": ["ReactJS", "CSS", "LeafletJS", "OSM Data", "GraphQL"]
   },
   {
     "name": "Mister Wild",
     "url": "https://florine-vnt.github.io/Mister_Wild/",
-    "repo_url":"https://github.com/florine-vnt/Mister_Wild",
-    "description": "Trouver les restaurants et bars autour du Campus Nantais de la WildCodeSchool",
-    "tags":["Javascript","HTML","CSS","Gmaps"]
+    "repo_url": "https://github.com/florine-vnt/Mister_Wild",
+    "description": "Trouver les restaurants et bars autour du Campus Nantais de la WildCodeSchool, 4 développeurs, 2 semaines",
+    "tags": ["Javascript", "HTML", "CSS", "Gmaps"]
   },
   {
     "name": "C.R.I.T.E.R Prompt",
     "url": "https://criter-prompt.vercel.app/",
-    "repo_url":"https://github.com/Acetoshi/prompt-generator",
+    "repo_url": "https://github.com/Acetoshi/prompt-generator",
     "description": "Un outil pédagogique pour apprendre à prompter ChatGPT destiné à des dirigeants dans le cadre d'une journée de formation sur l'IA",
-    "tags":["ReactJS","CSS"]
+    "tags": ["ReactJS", "CSS"]
   },
   {
     "name": "Portfolio",
     "url": "https://davidlegall.vercel.app/",
-    "repo_url":"https://github.com/Acetoshi/portfolio",
+    "repo_url": "https://github.com/Acetoshi/portfolio",
     "description": "Le portfolio sur lequel vous êtes en ce moment",
-    "tags":["NextJS","SSR","TypeScript","CSS"]
+    "tags": ["NextJS", "SSR", "TypeScript", "CSS"]
   },
   {
     "name": "Timer",
     "url": "http://wikifab.org/wiki/Timer_:_Un_minuteur_%C3%A0_base_d%27Arduino",
-    "repo_url":"https://github.com/Acetoshi/Timer/blob/master/Timer_code.ino",
+    "repo_url": "https://github.com/Acetoshi/Timer/blob/master/Timer_code.ino",
     "description": "Un projet pédagogique utilisé pendant un atelier de découverte de l'électronique de 3 jours chez le client SKF.",
-    "tags":["C++","Arduino","DIY Electronics","Documentation"]
+    "tags": ["C++", "Arduino", "DIY Electronics", "Documentation"]
   }
 ]
