@@ -91,10 +91,10 @@ nav {
   }
 
   .collapsed {
-    /* background-color: transparent; */
     mix-blend-mode: difference;
     transition: 0.6s;
     overflow: hidden;
+    
 
     & .nav-menu-button {
       & div.nav-menu-button-top-bar,
