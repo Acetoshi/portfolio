@@ -1,4 +1,3 @@
-"use client";
 import Card from "./Card";
 import projects from "../projects.json"
 
