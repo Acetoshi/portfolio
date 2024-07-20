@@ -56,7 +56,7 @@ h3 {
   font-size: 1.25rem;
 }
 
-ul {
+ul,menu {
   list-style-type: none;
   padding: 0;
 }

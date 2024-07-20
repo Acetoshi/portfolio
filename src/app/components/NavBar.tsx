@@ -15,12 +15,12 @@ export default function NavBar() {
 
   return (
     <nav className={isCollapsed ? "collapsed" : ""}>
-      <button role="button" className="nav-menu-button" onClick={toggleMenu}>
+      <button role="button" className="nav-menu-button" onClick={toggleMenu} aria-label={isCollapsed ? "ouvrir le menu de navigation" : "fermer le menu de navigation"}>
         <div className="nav-menu-button-top-bar"></div>
         <div className="nav-menu-button-middle-bar"></div>
         <div className="nav-menu-button-bottom-bar"></div>
       </button>
-      <ul>
+      <menu>
         <li>
           <button role="button" onClick={() => ScrollToSection("projects")}>
             Projets
@@ -41,7 +41,7 @@ export default function NavBar() {
             Contact
           </button>
         </li>
-      </ul>
+      </menu>
     </nav>
   );
 }
