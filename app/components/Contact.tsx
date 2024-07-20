@@ -17,6 +17,8 @@ export default function Contact() {
           <a href="https://www.codewars.com/users/Acetoshi" target="_blank">
             CODEWARS
           </a>
+        </li>
+        <li>
           <a href="/CV-DAVID_LE_GALL-Développeur_Web.pdf" target="_blank" download>
             MON CV [PDF]
           </a>
