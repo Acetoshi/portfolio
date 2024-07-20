@@ -7,11 +7,11 @@ export default function Header() {
           <span className="title-name">i&apos;m David. </span>{" "}
           <span className="title-smiley"> :D</span>
         </h1>
-        <h3>
+        <h2 className="header-subtitle">
           Développeur web fort d&apos;une expérience en ingénierie, design
           industriel et management, je suis prêt à apporter ma curiosité et mes
           compétences à des projets nouveaux.
-        </h3>
+        </h2>
       </hgroup>
     </header>
   );

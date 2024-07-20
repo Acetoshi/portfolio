@@ -29,7 +29,7 @@ header {
         animation-duration: 3s;
       }
     }
-    & h3 {
+    & h2 {
       background-color: var(--third-color);
       position: relative;
       z-index: 1;
