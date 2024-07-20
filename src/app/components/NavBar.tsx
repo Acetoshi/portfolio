@@ -6,7 +6,7 @@ export default function NavBar() {
   function ScrollToSection(sectionClassName: string) {
     const section = document.getElementsByClassName(sectionClassName)[0];
     section.scrollIntoView({ behavior: "smooth" });
-    setTimeout(()=>toggleMenu(),600);
+    setTimeout(() => toggleMenu(), 600);
   }
 
   function toggleMenu() {
@@ -15,7 +15,16 @@ export default function NavBar() {
 
   return (
     <nav className={isCollapsed ? "collapsed" : ""}>
-      <button role="button" className="nav-menu-button" onClick={toggleMenu} aria-label={isCollapsed ? "ouvrir le menu de navigation" : "fermer le menu de navigation"}>
+      <button
+        role="button"
+        className="nav-menu-button"
+        onClick={toggleMenu}
+        aria-label={
+          isCollapsed
+            ? "ouvrir le menu de navigation"
+            : "fermer le menu de navigation"
+        }
+      >
         <div className="nav-menu-button-top-bar"></div>
         <div className="nav-menu-button-middle-bar"></div>
         <div className="nav-menu-button-bottom-bar"></div>
