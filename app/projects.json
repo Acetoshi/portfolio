@@ -1,7 +1,7 @@
 [
   {
     "name": "WattMap",
-    "url": "https://wattmap.nantes-1.wilders.dev/",
+    "url": "https://github.com/WildCodeSchool-2024-02/JS-Nantes-RamCSS-P3-WattMap",
     "repo_url": "https://github.com/WildCodeSchool-2024-02/JS-Nantes-RamCSS-P3-WattMap",
     "description": "Une plateforme de réservation de bornes de recharge pour véhicule électriques. 4 développeurs",
     "tags": ["CRUD", "FullStack", "ExpressJS", "ReactJS", "CSS"]
