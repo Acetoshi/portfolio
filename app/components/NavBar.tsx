@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 export default function NavBar() {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -49,6 +50,9 @@ export default function NavBar() {
           <button role="button" onClick={() => ScrollToSection("contact")}>
             Contact
           </button>
+        </li>
+        <li>
+          <Link href="/cheatsheets">Cheatsheets</Link>
         </li>
       </menu>
     </nav>

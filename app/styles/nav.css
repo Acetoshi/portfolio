@@ -17,7 +17,7 @@ nav {
     color: var(--third-color);
     margin: 0;
 
-    & button {
+    & button,a {
       height: 100%;
       margin: 0px;
       background-color: var(--primary-color);
@@ -27,7 +27,7 @@ nav {
       font-size: 1.25rem;
     }
 
-    & button:hover {
+    & button:hover,a:hover {
       cursor: pointer;
       color: white;
     }
