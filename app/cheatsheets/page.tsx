@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Cheatsheets() {
   const cheatsheets = [
     {
@@ -16,6 +18,26 @@ export default function Cheatsheets() {
       linkname: "JAVASCRIPT VANILLA",
       link: "https://cloud.disroot.org/s/noqgtoTrtcFHN6p",
     },
+    {
+      linkname: "TYPESCRIPT",
+      link: "https://cloud.disroot.org/s/to234dTrneAGywH",
+    },
+    {
+      linkname: "REACT JS",
+      link: "https://cloud.disroot.org/s/MEiAStJco4P6qBo",
+    },
+    {
+      linkname: "NEXT",
+      link: "https://cloud.disroot.org/s/MLYDZSK567pamzd",
+    },
+    {
+      linkname: "SECURITY",
+      link: "https://cloud.disroot.org/s/HZi7J6XNrasyRYZ",
+    },
+    {
+      linkname: "TDD/TESTS",
+      link: "https://cloud.disroot.org/s/FSHTqNkD69KPDS7",
+    },
   ];
   return (
     <main>
@@ -31,7 +53,9 @@ export default function Cheatsheets() {
             </li>
           ))}
         </ul>
+        <Link href='/'>Retour au portfolio</Link>
       </section>
+      
     </main>
   );
 }
