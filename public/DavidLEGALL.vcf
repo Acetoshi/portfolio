@@ -1,11 +1,11 @@
 BEGIN:VCARD
-VERSION:3.0
+VERSION:2.1
 FN:David LE GALL
 N:LE GALL;David;;;
-TITLE:Full Stack Web Developer
+TEL;CELL:+33625042219
 EMAIL:legalldvd@gmail.com
-TEL;TYPE=CELL:+33625042219
+TITLE:Full Stack Web Developer
 URL:https://davidlegall.dev
-NOTE:Find me on LinkedIn: https://linkedin.com/in/davidlegall
-NOTE:GitHub profile: https://github.com/Acetoshi
+URL: https://linkedin.com/in/davidlegall
+URL: https://github.com/Acetoshi
 END:VCARD
