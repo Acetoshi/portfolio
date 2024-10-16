@@ -23,6 +23,11 @@ export default function Contact() {
             MON CV [PDF]
           </a>
         </li>
+        <li>
+          <a href="/DavidLEGALL.vcf" target="_blank" download>
+            CARTE DE VISITE [VCF]
+          </a>
+        </li>
       </ul>
     </section>
   );
