@@ -36,6 +36,24 @@ header {
       padding-bottom: 20px;
     }
   }
+
+  & .bouncy-button{
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    bottom: 25px;
+    cursor: pointer;
+     
+    & img{
+      height: 64px;
+      animation: hover-me .5s infinite ease-in-out alternate;
+    }
+  }
+
+}
+
+@keyframes hover-me {
+  100% { transform: translate3d(0, 25px, 0); }
 }
 
 @keyframes slideUp {

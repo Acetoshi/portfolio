@@ -1,4 +1,12 @@
+"use client";
 export default function Header() {
+
+  function ScrollToSection(sectionClassName: string) {
+    const section = document.getElementsByClassName(sectionClassName)[0];
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+
+
   return (
     <header>
       <hgroup>
@@ -13,6 +21,9 @@ export default function Header() {
           compétences à des projets nouveaux.
         </h2>
       </hgroup>
+      <button className="bouncy-button" onClick={() => ScrollToSection("projects")}>
+        <img src="/chevron-down.svg" alt="voir plus" />
+      </button>
     </header>
   );
 }
