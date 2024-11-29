@@ -1,35 +1,57 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { comparePerformance } from "./code-comparator";
+
 import NavBar from "../components/NavBar";
 import "../styles/codeCompare.css";
+import CodeInterface from "./CodeInterface";
 
 export default function CodeComparator() {
-  const [result, setResult] = useState<string>("");
-  const [winner, setWinner] = useState<number|null>(null);
-  const consoleOutput1 = useRef<string[]>([]); // Store console output for block 1
-  const consoleOutput2 = useRef<string[]>([]); // Store console output for block 2
+  const codeStringA = `
+  const arr = Array.from({ length: 10000 }, (_, i) => i + 1);
+  let sum = 0;
+  
+  arr.forEach((item) => {
+    sum += item;
+  });
 
+  console.log(sum); // Output: 500500
+  `;
+
+  const codeStringB = `
+let arr = [];
+for (let i = 1; i <= 1000; i++) {
+  arr.push(i);
+}
+let sum = 0;
+
+arr.forEach((item) => {
+  sum += item;
+});
+
+console.log(sum); // Output: 500500
+`
+  const [winner, setWinner] = useState<number | null>(null);
+  const [codeA, setCodeA] = useState<string>(codeStringA);
+  const [consoleOutputA, setConsoleOutputA] = useState<string[]>([]);
+  const [codeB, setCodeB] = useState<string>(codeStringB);
+  const [consoleOutputB, setConsoleOutputB] = useState<string[]>([]);
 
   const handleCompare = () => {
-    const codeBlock1 = (
-      document.getElementById("codeBlock1") as HTMLTextAreaElement
-    ).value;
-    const codeBlock2 = (
-      document.getElementById("codeBlock2") as HTMLTextAreaElement
-    ).value;
-
     try {
-      const { time1, time2, winner:faster, output1, output2 } = comparePerformance(
-        codeBlock1,
-        codeBlock2
-      );
+      const {
+        time1,
+        time2,
+        winner: faster,
+        output1,
+        output2,
+      } = comparePerformance(codeA, codeB);
 
       output1.push(`\nExecution Time: ${time1.toFixed(2)} ms`);
       output2.push(`\nExecution Time: ${time2.toFixed(2)} ms`);
 
-      document.getElementById("console1")!.innerHTML = output1.join("<br>");
-      document.getElementById("console2")!.innerHTML = output2.join("<br>");
+      setConsoleOutputA(output1);
+      setConsoleOutputB(output2);
 
       setWinner(faster);
     } catch {
@@ -37,39 +59,30 @@ export default function CodeComparator() {
     }
   };
 
+  console.log(codeA);
+
   return (
     <>
       <NavBar />
       <main style={{ padding: "20px", paddingTop: "10vh" }}>
-        <h1 className="flex-centered">JavaScript Efficiency Comparator</h1>
+        <h1 className="flex-centered">Compare JavaScript Efficiency</h1>
         <section className="code-blocks-container">
-          <div style={{ width: "48%" }}>
-            <h3>Code Block A</h3>
-            <textarea
-              id="codeBlock1"
-              className={`${winner===1?"faster":""} code-block`}
-              placeholder="Paste JavaScript code here..."
-            />
-            <h3>Console A</h3>
-            <div id="console1" className="code-console"></div>
-          </div>
-          <div style={{ width: "48%" }}>
-            <h3>Code Block B</h3>
-            <textarea
-              id="codeBlock2"
-              className={`${winner===2?"faster":""} code-block`}
-              placeholder="Paste JavaScript code here..."
-            />
-            <h3>Console B</h3>
-            <div id="console2" className="code-console"></div>
-          </div>
+          <CodeInterface
+            label="A"
+            codeState={[codeA, setCodeA]}
+            consoleOutput={consoleOutputA}
+            isFaster={winner === 1}
+          />
+          <CodeInterface
+            label="B"
+            codeState={[codeB, setCodeB]}
+            consoleOutput={consoleOutputB}
+            isFaster={winner === 2}
+          />
         </section>
         <section className="flex-centered">
-          <button
-            onClick={handleCompare}
-            className="action-btn"
-          >
-            Compare Performance
+          <button onClick={handleCompare} className="action-btn">
+            Compare
           </button>
         </section>
       </main>

@@ -14,22 +14,11 @@ export const comparePerformance = (
   const { time: time1, output: output1 } = captureConsoleOutput(codeBlock1);
   const { time: time2, output: output2 } = captureConsoleOutput(codeBlock2);
 
-  // Compare execution times
-  let winner;
+  let winner = 0; // Default to draw (0)
   if (time1 < time2) {
-    winner = "Code Block 1 is faster!"; //1
+    winner = 1; // Block 1 is faster
   } else if (time2 < time1) {
-    winner = "Code Block 2 is faster!"; //2
-  } else {
-    winner = "Both Code Blocks have the same execution time!"; //0
-  }
-
-  if (time1 < time2) {
-    winner = 1;
-  } else if (time2 < time1) {
-    winner = 2;
-  } else {
-    winner = 0;
+    winner = 2; // Block 2 is faster
   }
 
   return {
@@ -55,15 +44,11 @@ const captureConsoleOutput = (code: string) => {
   try {
     validateCode(code);
     const start = performance.now();
-    new Function(
-      `
-            (function() {
-              // Block access to global objects
-              const window = undefined, document = undefined, fetch = undefined, XMLHttpRequest = undefined, eval = undefined;
-              ${code}
-            })();
-            `
-    )();
+    new Function(`(function() {
+        // Block access to global objects
+        const window = undefined, document = undefined, fetch = undefined, XMLHttpRequest = undefined, eval = undefined;
+        ${code}
+        })();`)();
     const time = performance.now() - start;
     return { time, output };
   } catch (error: unknown) {
