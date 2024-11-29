@@ -10,27 +10,6 @@ export default function CodeComparator() {
   const consoleOutput1 = useRef<string[]>([]); // Store console output for block 1
   const consoleOutput2 = useRef<string[]>([]); // Store console output for block 2
 
-  const disallowedPatterns = [
-    /while\s*\(true\)/i, // Infinite while loop
-    /for\s*\(;;\)/i, // Infinite for loop
-    /window/i, // Access to window
-    /document/i, // Access to document
-    /eval/i, // Use of eval
-    /fetch/i, // Network requests
-    /XMLHttpRequest/i, // AJAX requests
-  ];
-
-  // Helper function to validate code
-  const validateCode = (code: string, blockName: string) => {
-    for (const pattern of disallowedPatterns) {
-      if (pattern.test(code)) {
-        throw new Error(
-          `Disallowed pattern found in ${blockName}: "${pattern.source}"`
-        );
-      }
-    }
-    return true;
-  };
 
   const handleCompare = () => {
     const codeBlock1 = (
