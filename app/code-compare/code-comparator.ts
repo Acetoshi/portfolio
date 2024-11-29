@@ -53,6 +53,7 @@ const captureConsoleOutput = (code: string) => {
 
   // Execute the code within a sandboxed environment
   try {
+    validateCode(code);
     const start = performance.now();
     new Function(
       `
@@ -65,9 +66,36 @@ const captureConsoleOutput = (code: string) => {
     )();
     const time = performance.now() - start;
     return { time, output };
-  } catch (error) {
-    throw error;
+  } catch (error: unknown) {
+    // Error type is `unknown` in modern TypeScript
+    if (error instanceof Error) {
+      output.push(`Error: ${error.message}`);
+      return { time: Infinity, output }; // Return the output with the error message
+    } else {
+      output.push(`Unknown error`);
+      return { time: Infinity, output };
+    }
   } finally {
     console.log = originalConsoleLog; // Restore original console.log
   }
+};
+
+const disallowedPatterns = [
+  /while\s*\(true\)/i, // Infinite while loop
+  /for\s*\(;;\)/i, // Infinite for loop
+  /window/i, // Access to window
+  /document/i, // Access to document
+  /eval/i, // Use of eval
+  /fetch/i, // Network requests
+  /XMLHttpRequest/i, // AJAX requests
+];
+
+// Helper function to validate code
+const validateCode = (code: string) => {
+  for (const pattern of disallowedPatterns) {
+    if (pattern.test(code)) {
+      throw new Error(`Disallowed pattern found : "${pattern.source}"`);
+    }
+  }
+  return true;
 };
