@@ -1,9 +1,12 @@
 "use client";
 import { useState, useRef } from "react";
 import { comparePerformance } from "./code-comparator";
+import NavBar from "../components/NavBar";
+import "../styles/codeCompare.css";
 
 export default function CodeComparator() {
   const [result, setResult] = useState<string>("");
+  const [winner, setWinner] = useState<number>(null);
   const consoleOutput1 = useRef<string[]>([]); // Store console output for block 1
   const consoleOutput2 = useRef<string[]>([]); // Store console output for block 2
 
@@ -30,116 +33,67 @@ export default function CodeComparator() {
   };
 
   const handleCompare = () => {
-    const codeBlock1 = (document.getElementById('codeBlock1') as HTMLTextAreaElement).value;
-    const codeBlock2 = (document.getElementById('codeBlock2') as HTMLTextAreaElement).value;
+    const codeBlock1 = (
+      document.getElementById("codeBlock1") as HTMLTextAreaElement
+    ).value;
+    const codeBlock2 = (
+      document.getElementById("codeBlock2") as HTMLTextAreaElement
+    ).value;
 
     try {
-      const comparisonResult = comparePerformance(codeBlock1, codeBlock2);
+      const { time1, time2, winner:faster, output1, output2 } = comparePerformance(
+        codeBlock1,
+        codeBlock2
+      );
 
-      // Update result based on the comparison
-      setResult(`
-        <h3>Results:</h3>
-        <p>Code Block 1 Execution Time: ${comparisonResult.time1.toFixed(2)} ms</p>
-        <p>Code Block 2 Execution Time: ${comparisonResult.time2.toFixed(2)} ms</p>
-        <h4>${comparisonResult.winner}</h4>
-      `);
+      output1.push(`\nExecution Time: ${time1.toFixed(2)} ms`);
+      output2.push(`\nExecution Time: ${time2.toFixed(2)} ms`);
 
-      // Display console outputs
-      document.getElementById('console1')!.innerHTML = comparisonResult.output1.join('<br>');
-      document.getElementById('console2')!.innerHTML = comparisonResult.output2.join('<br>');
+      document.getElementById("console1")!.innerHTML = output1.join("<br>");
+      document.getElementById("console2")!.innerHTML = output2.join("<br>");
+
+      setWinner(faster);
     } catch (error) {
       setResult(`<p style="color: red;">Error: ${error.message}</p>`);
     }
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>JavaScript Efficiency Comparator</h1>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          gap: "20px",
-        }}
-      >
-        <div style={{ width: "48%" }}>
-          <h3>Code Block 1</h3>
-          <textarea
-            id="codeBlock1"
-            placeholder="Paste JavaScript code here..."
-            style={{
-              width: "100%",
-              height: "150px",
-              fontFamily: "monospace",
-              fontSize: "14px",
-            }}
-          />
-          <div
-            id="console1"
-            style={{
-              marginTop: "10px",
-              padding: "10px",
-              backgroundColor: "#f1f1f1",
-              border: "1px solid #ccc",
-              minHeight: "100px",
-              fontFamily: "monospace",
-              fontSize: "14px",
-              whiteSpace: "pre-wrap",
-            }}
-          ></div>
-        </div>
-        <div style={{ width: "48%" }}>
-          <h3>Code Block 2</h3>
-          <textarea
-            id="codeBlock2"
-            placeholder="Paste JavaScript code here..."
-            style={{
-              width: "100%",
-              height: "150px",
-              fontFamily: "monospace",
-              fontSize: "14px",
-            }}
-          />
-          <div
-            id="console2"
-            style={{
-              marginTop: "10px",
-              padding: "10px",
-              backgroundColor: "#f1f1f1",
-              border: "1px solid #ccc",
-              minHeight: "100px",
-              fontFamily: "monospace",
-              fontSize: "14px",
-              whiteSpace: "pre-wrap",
-            }}
-          ></div>
-        </div>
-      </div>
-      <button
-        onClick={handleCompare}
-        style={{
-          padding: "10px 15px",
-          backgroundColor: "#4CAF50",
-          color: "white",
-          border: "none",
-          cursor: "pointer",
-          borderRadius: "5px",
-          marginTop: "10px",
-        }}
-      >
-        Compare Performance
-      </button>
-      <div
-        id="result"
-        dangerouslySetInnerHTML={{ __html: result }}
-        style={{
-          marginTop: "20px",
-          padding: "10px",
-          backgroundColor: "#e9e9ff",
-          border: "1px solid #ccc",
-          borderRadius: "5px",
-        }}
-      />
-    </div>
+    <>
+      <NavBar />
+      <main style={{ padding: "20px", paddingTop: "10vh" }}>
+        <h1 className="flex-centered">JavaScript Efficiency Comparator</h1>
+        <section className="code-blocks-container">
+          <div style={{ width: "48%" }}>
+            <h3>Code Block A</h3>
+            <textarea
+              id="codeBlock1"
+              className={`${winner===1?"faster":""} code-block`}
+              placeholder="Paste JavaScript code here..."
+            />
+            <h3>Console A</h3>
+            <div id="console1" className="code-console"></div>
+          </div>
+          <div style={{ width: "48%" }}>
+            <h3>Code Block B</h3>
+            <textarea
+              id="codeBlock2"
+              className={`${winner===2?"faster":""} code-block`}
+              placeholder="Paste JavaScript code here..."
+            />
+            <h3>Console B</h3>
+            <div id="console2" className="code-console"></div>
+          </div>
+        </section>
+        <section className="flex-centered">
+          <button
+            onClick={handleCompare}
+            className="action-btn"
+          >
+            Compare Performance
+          </button>
+        </section>
+      </main>
+    </>
   );
 }

@@ -1,0 +1,76 @@
+.code-console {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  min-height: 100px;
+  max-height: 150px;
+  font-family: monospace;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  color: white;
+  background-color: black;
+  border-radius: 8px;
+}
+
+.faster {
+    border-color: var(--accent1-color);
+    border: 4px solid var(--accent1-color);
+}
+
+main {
+    color: white;
+    background-color: black;
+    min-height: 100vh;
+}
+
+.code-block {
+  width: 100%;
+  height: 50vh;
+  font-family: monospace;
+  font-size: 1rem;
+  color: white;
+  background-color: black;
+  border-radius: 8px;
+}
+
+.code-blocks-container {
+  display: flex;
+  padding: 2.5vw;
+  gap: 5vw;
+}
+
+.flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-btn {
+  border: 0px;
+  opacity: 70%;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: 0.3s;
+  background-color: var(--accent1-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.action-btn:hover,
+.action-btn:focus {
+  opacity: 100%;
+  text-underline-offset: 4px;
+}
+
+
+/* style={{
+    padding: "10px 15px",
+    backgroundColor: "#4CAF50",
+    color: "white",
+    border: "none",
+    cursor: "pointer",
+    borderRadius: "5px",
+    marginTop: "10px",
+  }} */

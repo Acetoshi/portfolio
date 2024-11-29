@@ -17,11 +17,19 @@ export const comparePerformance = (
   // Compare execution times
   let winner;
   if (time1 < time2) {
-    winner = "Code Block 1 is faster!";
+    winner = "Code Block 1 is faster!"; //1
   } else if (time2 < time1) {
-    winner = "Code Block 2 is faster!";
+    winner = "Code Block 2 is faster!"; //2
   } else {
-    winner = "Both Code Blocks have the same execution time!";
+    winner = "Both Code Blocks have the same execution time!"; //0
+  }
+
+  if (time1 < time2) {
+    winner = 1;
+  } else if (time2 < time1) {
+    winner = 2;
+  } else {
+    winner = 0;
   }
 
   return {
@@ -34,7 +42,7 @@ export const comparePerformance = (
 };
 
 // Capture console output
-const captureConsoleOutput = ( code: string) => {
+const captureConsoleOutput = (code: string) => {
   const originalConsoleLog = console.log;
   const output: string[] = [];
 
