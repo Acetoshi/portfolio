@@ -71,6 +71,9 @@ const captureConsoleOutput = (code: string) => {
     if (error instanceof Error) {
       output.push(`Error: ${error.message}`);
       return { time: Infinity, output }; // Return the output with the error message
+    } else {
+      output.push(`Unknown error`);
+      return { time: Infinity, output };
     }
   } finally {
     console.log = originalConsoleLog; // Restore original console.log
