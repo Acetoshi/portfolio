@@ -1,7 +1,7 @@
 type ComparisonResult = {
   time1: number;
   time2: number;
-  winner: string;
+  winner: number;
   output1: string[];
   output2: string[];
 };

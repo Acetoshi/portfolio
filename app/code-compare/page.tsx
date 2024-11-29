@@ -6,7 +6,7 @@ import "../styles/codeCompare.css";
 
 export default function CodeComparator() {
   const [result, setResult] = useState<string>("");
-  const [winner, setWinner] = useState<number>(null);
+  const [winner, setWinner] = useState<number|null>(null);
   const consoleOutput1 = useRef<string[]>([]); // Store console output for block 1
   const consoleOutput2 = useRef<string[]>([]); // Store console output for block 2
 
@@ -53,8 +53,8 @@ export default function CodeComparator() {
       document.getElementById("console2")!.innerHTML = output2.join("<br>");
 
       setWinner(faster);
-    } catch (error) {
-      setResult(`<p style="color: red;">Error: ${error.message}</p>`);
+    } catch {
+      // setResult(`<p style="color: red;">Error: ${error.message}</p>`);
     }
   };
 
