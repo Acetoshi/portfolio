@@ -1,6 +1,6 @@
 export default function Skills() {
   return (
-    <section className="skills">
+    <section className="skills" id="skills">
       <h2>COMPÉTENCES</h2>
       <section className="skills-lists-wrapper">
         <section className="soft-skills">

@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import NavBar from "../components/NavBar";
-import CodeInterface from "./CodeInterface";
+import CodeInterface from "../components/CodeInterface";
 import "../styles/codeCompare.css";
 
 export default function CodeComparator() {
@@ -98,9 +97,7 @@ export default function CodeComparator() {
   };
 
   return (
-    <>
-      <NavBar />
-      <main style={{ padding: "20px", paddingTop: "10vh" }}>
+      <div className="main-container" >
         <h1 className="flex-centered">Compare JavaScript Efficiency</h1>
         <section className="code-blocks-container">
           <CodeInterface
@@ -146,7 +143,6 @@ export default function CodeComparator() {
           </select>
           iterations
         </section>
-      </main>
-    </>
+      </div>
   );
 }

@@ -1,9 +1,9 @@
 nav {
   width: 100vw;
-  --nav-gap: 16px;
+  --nav-gap: 8px;
   display: flex;
   background-color: var(--primary-color);
-  padding: var(--nav-gap);
+  height:3rem;
   justify-content: center;
   position: fixed;
   top: 0px;
@@ -25,6 +25,7 @@ nav {
       border: 0px;
       transition: 100ms;
       font-size: 1.25rem;
+      padding:8px;
     }
 
     & button:hover,a:hover {

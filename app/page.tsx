@@ -4,25 +4,21 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
-import "./styles/nav.css"
-import "./styles/header.css"
-import "./styles/projects.css"
-import "./styles/card.css"
-import "./styles/experience.css"
-import "./styles/skills.css"
-import "./styles/contact.css"
+import "./styles/header.css";
+import "./styles/projects.css";
+import "./styles/card.css";
+import "./styles/experience.css";
+import "./styles/skills.css";
+import "./styles/contact.css";
 
 export default function Home() {
   return (
     <>
-      <NavBar />
-      <main>
-        <Header />
-        <Projects />
-        <Skills />
-        <Experience />
-        <Contact />
-      </main>
+      <Header />
+      <Projects />
+      <Skills />
+      <Experience />
+      <Contact />
     </>
   );
 }

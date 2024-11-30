@@ -3,7 +3,7 @@ import projects from "../projects.json"
 
 export default function Projects() {
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <h2>PROJETS</h2>
       <ul className="projects-list">
         {projects.map((project) => (

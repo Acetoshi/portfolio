@@ -17,8 +17,6 @@ export default function NavBar() {
     setIsCollapsed(() => !isCollapsed);
   }
 
-  console.log("Current URL:", path);
-
   return (
     <nav className={isCollapsed ? "collapsed" : ""}>
       <button
@@ -63,9 +61,20 @@ export default function NavBar() {
             </li>
           </>
         ) : (
-          <li>
-            <Link href="/">Accueil</Link>
-          </li>
+          <>
+            <li>
+              <Link href="/#projects">Projets</Link>
+            </li>
+            <li>
+              <Link href="/#skills">Compétences</Link>
+            </li>
+            <li>
+              <Link href="/#experience">Expériences</Link>
+            </li>
+            <li>
+              <Link href="/#contact">Contact</Link>
+            </li>
+          </>
         )}
 
         <li>

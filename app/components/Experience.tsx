@@ -3,7 +3,7 @@ import experience from "../experience.json";
 
 export default function Experience() {
   return (
-    <section className="experience">
+    <section className="experience" id="experience">
       <h2>EXPÉRIENCES</h2>
       <ul>
         {experience.map((job) => (
