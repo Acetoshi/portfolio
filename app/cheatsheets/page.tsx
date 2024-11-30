@@ -21,11 +21,15 @@ export default function Cheatsheets() {
       link: "https://cloud.disroot.org/s/to234dTrneAGywH",
     },
     {
+      linkname: "CSS",
+      link: "https://cloud.disroot.org/s/tQF87DGkzJNBGP2",
+    },
+    {
       linkname: "REACT JS",
       link: "https://cloud.disroot.org/s/MEiAStJco4P6qBo",
     },
     {
-      linkname: "NEXT",
+      linkname: "NEXT JS",
       link: "https://cloud.disroot.org/s/MLYDZSK567pamzd",
     },
     {
@@ -36,7 +40,16 @@ export default function Cheatsheets() {
       linkname: "TDD/TESTS",
       link: "https://cloud.disroot.org/s/FSHTqNkD69KPDS7",
     },
+    {
+      linkname: "DOCKER",
+      link: "https://cloud.disroot.org/s/Sib45KAQx8qrTzg",
+    },
+    {
+      linkname: "GRAPHQL",
+      link: "https://cloud.disroot.org/s/9YJH4gmkLN8maJx",
+    },
   ];
+
   return (
     <>
       <main>
