@@ -52,6 +52,8 @@ export default function CodeComparator() {
   const handleCompare = async () => {
     setWorkingA(true);
     setWorkingB(true);
+    setTimeA(null);
+    setTimeB(null);
     setWinner(0);
 
     runWorker(codeB, cycles, "B");
