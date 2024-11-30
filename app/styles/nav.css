@@ -25,7 +25,7 @@ nav {
       border: 0px;
       transition: 100ms;
       font-size: 1.25rem;
-      padding:8px;
+      padding:0px 8px;
     }
 
     & button:hover,a:hover {
@@ -55,6 +55,7 @@ nav {
     border-radius: 8px;
     padding: 16px;
     transition: 0.6s;
+    height:unset;
     gap: calc(var(--global-gap) / 3);
 
     & menu {

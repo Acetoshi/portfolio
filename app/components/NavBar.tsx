@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 export default function NavBar() {
@@ -10,12 +10,17 @@ export default function NavBar() {
   function ScrollToSection(sectionClassName: string) {
     const section = document.getElementsByClassName(sectionClassName)[0];
     section.scrollIntoView({ behavior: "smooth" });
-    setTimeout(() => toggleMenu(), 600);
+    setTimeout(() => toggleMenu(), 500);
   }
 
   function toggleMenu() {
     setIsCollapsed(() => !isCollapsed);
   }
+
+  // close the Nav in mobile menu after navigation
+  useEffect(()=>{
+    setTimeout(() => setIsCollapsed(true), 100);
+  },[path])
 
   return (
     <nav className={isCollapsed ? "collapsed" : ""}>
@@ -63,7 +68,7 @@ export default function NavBar() {
         ) : (
           <>
             <li>
-              <Link href="/#projects">Projets</Link>
+              <Link  href="/#projects">Projets</Link>
             </li>
             <li>
               <Link href="/#skills">Compétences</Link>
