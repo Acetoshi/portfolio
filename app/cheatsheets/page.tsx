@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavBar from "../components/NavBar";
 
 export default function Cheatsheets() {
   const cheatsheets = [
@@ -40,22 +41,23 @@ export default function Cheatsheets() {
     },
   ];
   return (
-    <main>
-      <section className="projects">
-        <h1>CHEATSHEETS</h1>
-        <h2>FEEL FREE TO SHARE</h2>
-        <ul>
-          {cheatsheets.map((el) => (
-            <li key={el.linkname}>
-              <a href={el.link} target="_blank">
-                {el.linkname}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <Link href='/'>Retour au portfolio</Link>
-      </section>
-      
-    </main>
+    <>
+      <NavBar />
+      <main>
+        <section className="projects">
+          <h1>CHEATSHEETS</h1>
+          <h2>FEEL FREE TO SHARE</h2>
+          <ul>
+            {cheatsheets.map((el) => (
+              <li key={el.linkname}>
+                <a href={el.link} target="_blank">
+                  {el.linkname}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </main>
+    </>
   );
 }
