@@ -1,8 +1,11 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+
 export default function NavBar() {
   const [isCollapsed, setIsCollapsed] = useState(true);
+  const path = usePathname();
 
   function ScrollToSection(sectionClassName: string) {
     const section = document.getElementsByClassName(sectionClassName)[0];
@@ -13,6 +16,8 @@ export default function NavBar() {
   function toggleMenu() {
     setIsCollapsed(() => !isCollapsed);
   }
+
+  console.log("Current URL:", path);
 
   return (
     <nav className={isCollapsed ? "collapsed" : ""}>
@@ -31,28 +36,43 @@ export default function NavBar() {
         <div className="nav-menu-button-bottom-bar"></div>
       </button>
       <menu>
-        <li>
-          <button role="button" onClick={() => ScrollToSection("projects")}>
-            Projets
-          </button>
-        </li>
-        <li>
-          <button role="button" onClick={() => ScrollToSection("skills")}>
-            Compétences
-          </button>
-        </li>
-        <li>
-          <button role="button" onClick={() => ScrollToSection("experience")}>
-            Expériences
-          </button>
-        </li>
-        <li>
-          <button role="button" onClick={() => ScrollToSection("contact")}>
-            Contact
-          </button>
-        </li>
+        {path === "/" ? (
+          <>
+            <li>
+              <button role="button" onClick={() => ScrollToSection("projects")}>
+                Projets
+              </button>
+            </li>
+            <li>
+              <button role="button" onClick={() => ScrollToSection("skills")}>
+                Compétences
+              </button>
+            </li>
+            <li>
+              <button
+                role="button"
+                onClick={() => ScrollToSection("experience")}
+              >
+                Expériences
+              </button>
+            </li>
+            <li>
+              <button role="button" onClick={() => ScrollToSection("contact")}>
+                Contact
+              </button>
+            </li>
+          </>
+        ) : (
+          <li>
+            <Link href="/">Accueil</Link>
+          </li>
+        )}
+
         <li>
           <Link href="/cheatsheets">Cheatsheets</Link>
+        </li>
+        <li>
+          <Link href="/code-compare">Code Compare</Link>
         </li>
       </menu>
     </nav>

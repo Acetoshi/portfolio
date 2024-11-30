@@ -1,6 +1,6 @@
 nav {
   width: 100vw;
-  --nav-gap: 8px;
+  --nav-gap: 16px;
   display: flex;
   background-color: var(--primary-color);
   padding: var(--nav-gap);
