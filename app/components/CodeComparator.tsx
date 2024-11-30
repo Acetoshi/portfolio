@@ -2,26 +2,10 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import CodeInterface from "./CodeInterface";
+import { sampleCodeA, sampleCodeB } from "./sampleSnippets";
 import "../styles/codeCompare.css";
 
 export default function CodeComparator() {
-  const codeStringA = `const arr = [5, 2, 8, 1, 3];
-
-  // First, sort the array, then map it to get squared values
-  const sortedAndSquared = arr.sort((a, b) => a - b).map(num => num * num);
-
-  console.log(sortedAndSquared);`;
-
-  const codeStringB = `const arr = [5, 2, 8, 1, 3];
-
-  // Using reduce to accumulate the sorted squared values
-  const sortedAndSquaredUsingReduce = arr.reduce((acc, num) => {
-    acc.push(num * num);  // Push the square of each number to the accumulator
-    return acc;
-  }, []).sort((a, b) => a - b);  // Sort the result after accumulating
-
-  console.log(sortedAndSquaredUsingReduce);`;
-
   const [winner, setWinner] = useState<number | null>(null);
 
   const [workingA, setWorkingA] = useState<boolean>(false);
@@ -49,8 +33,8 @@ export default function CodeComparator() {
     return code === null ? null : decodeURIComponent(code);
   };
 
-  const [codeA, setCodeA] = useState<string>(decode(urlCodeA) || codeStringA);
-  const [codeB, setCodeB] = useState<string>(decode(urlCodeB) || codeStringB);
+  const [codeA, setCodeA] = useState<string>(decode(urlCodeA) || sampleCodeA);
+  const [codeB, setCodeB] = useState<string>(decode(urlCodeB) || sampleCodeB);
 
   //This is to store code back into URL parameters, needed to share results
   useEffect(() => {
@@ -132,7 +116,7 @@ export default function CodeComparator() {
 
   return (
     <div className="main-container">
-      <h1 className="flex-centered">Compare JavaScript Efficiency</h1>
+      <h1 className="flex-centered">COMPARE JS EXECUTION TIME</h1>
       <section className="code-blocks-container">
         <CodeInterface
           label="A"

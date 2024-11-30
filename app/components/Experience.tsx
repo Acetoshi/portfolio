@@ -1,5 +1,5 @@
 import Job from "../components/Job";
-import experience from "../experience.json";
+import experience from "../data/experience.json";
 
 export default function Experience() {
   return (

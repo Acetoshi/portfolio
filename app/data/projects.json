@@ -1,24 +1,49 @@
 [
   {
-  "name": "First Lego League Ranker",
-  "url": "https://walterwater.app/",
-  "repo_url": "https://github.com/Acetoshi/WalterWater",
-  "description": "Un outil de gestion de compétitions de robot, gestion de l'organisation des sessions, collecte des notations par les jurys et calcul du classement",
-  "tags": ["ReactTS", "Material UI", "GraphQL","NodeTS", "SQLite", "Docker", "CRUD","JWT"]
+    "name": "First Lego League Ranker",
+    "url": "https://walterwater.app/",
+    "repo_url": "https://github.com/Acetoshi/WalterWater",
+    "description": "Un outil de gestion de compétitions de robot, gestion de l'organisation des sessions, collecte des notations par les jurys et calcul du classement",
+    "tags": [
+      "ReactTS",
+      "Material UI",
+      "GraphQL",
+      "NodeTS",
+      "SQLite",
+      "Docker",
+      "CRUD",
+      "JWT"
+    ]
   },
   {
     "name": "Walter Water",
     "url": "https://github.com/Acetoshi/FLL-Ranker-App",
     "repo_url": "https://github.com/Acetoshi/FLL-Ranker-App",
     "description": "Une app web et android pour localiser les points d'eau et les toilettes proches partout dans le monde, basée sur les donénes d'Open Street Maps",
-    "tags": ["ReactJS", "CSS", "LeafletJS", "OSM Data", "GraphQL","PWA","React Native","Expo"]
+    "tags": [
+      "ReactJS",
+      "CSS",
+      "LeafletJS",
+      "OSM Data",
+      "GraphQL",
+      "PWA",
+      "React Native",
+      "Expo"
+    ]
+  },
+  {
+    "name": "Code Compare",
+    "url": "https://davidlegall.dev/code-compare",
+    "repo_url": "https://github.com/Acetoshi/portfolio/blob/main/app/components/CodeComparator.tsx",
+    "description": "Outil d'optimisation de code, permettant d'analyser le temps d'exécution",
+    "tags": ["NextJS", "Web Workers", "Monca Editor", "CSS"]
   },
   {
     "name": "WattMap",
     "url": "https://github.com/WildCodeSchool-2024-02/JS-Nantes-RamCSS-P3-WattMap",
     "repo_url": "https://github.com/WildCodeSchool-2024-02/JS-Nantes-RamCSS-P3-WattMap",
     "description": "Une plateforme de réservation de bornes de recharge pour véhicule électriques. 4 développeurs",
-    "tags": ["CRUD", "FullStack", "ExpressJS", "ReactJS", "CSS","JWT"]
+    "tags": ["CRUD", "FullStack", "ExpressJS", "ReactJS", "CSS", "JWT"]
   },
   {
     "name": "Équitalent",
