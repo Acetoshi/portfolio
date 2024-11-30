@@ -1,55 +1,6 @@
-export default function Cheatsheets() {
-  const cheatsheets = [
-    {
-      linkname: "TERMINAL & GIT",
-      link: "https://cloud.disroot.org/s/iq89JPJENZCRb5e",
-    },
-    {
-      linkname: "EXPRESS",
-      link: "https://cloud.disroot.org/s/ECymM5SH8W368gB",
-    },
-    {
-      linkname: "ANGULAR",
-      link: "https://cloud.disroot.org/s/q98ZCRKbambZGD7",
-    },
-    {
-      linkname: "JAVASCRIPT VANILLA",
-      link: "https://cloud.disroot.org/s/noqgtoTrtcFHN6p",
-    },
-    {
-      linkname: "TYPESCRIPT",
-      link: "https://cloud.disroot.org/s/to234dTrneAGywH",
-    },
-    {
-      linkname: "CSS",
-      link: "https://cloud.disroot.org/s/tQF87DGkzJNBGP2",
-    },
-    {
-      linkname: "REACT JS",
-      link: "https://cloud.disroot.org/s/MEiAStJco4P6qBo",
-    },
-    {
-      linkname: "NEXT JS",
-      link: "https://cloud.disroot.org/s/MLYDZSK567pamzd",
-    },
-    {
-      linkname: "SECURITY",
-      link: "https://cloud.disroot.org/s/HZi7J6XNrasyRYZ",
-    },
-    {
-      linkname: "TDD/TESTS",
-      link: "https://cloud.disroot.org/s/FSHTqNkD69KPDS7",
-    },
-    {
-      linkname: "DOCKER",
-      link: "https://cloud.disroot.org/s/Sib45KAQx8qrTzg",
-    },
-    {
-      linkname: "GRAPHQL",
-      link: "https://cloud.disroot.org/s/9YJH4gmkLN8maJx",
-    },
-  ];
+import cheatsheets from "../data/cheatsheets.json"
 
+export default function Cheatsheets() {
   return (
     <>
       <main>
@@ -57,10 +8,10 @@ export default function Cheatsheets() {
           <h1>CHEATSHEETS</h1>
           <h2>FEEL FREE TO SHARE</h2>
           <ul>
-            {cheatsheets.map((el) => (
-              <li key={el.linkname}>
-                <a href={el.link} target="_blank">
-                  {el.linkname}
+            {cheatsheets.map((cheatsheet) => (
+              <li key={cheatsheet.linkname}>
+                <a href={cheatsheet.link} target="_blank">
+                  {cheatsheet.linkname}
                 </a>
               </li>
             ))}
