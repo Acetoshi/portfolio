@@ -54,12 +54,14 @@ export default function CodeComparator() {
 
   //This is to store code inside URL parameters, needed to share results
   useEffect(() => {
-    router.replace(
-      `${pathname}?iterations=${cycles}&codeA=${encode(codeA)}&codeB=${encode(
-        codeB
-      )}`,
-      { scroll: false }
-    );
+    if (cycles && codeA && codeB) {
+      router.replace(
+        `${pathname}?iterations=${cycles}&codeA=${encode(codeA)}&codeB=${encode(
+          codeB
+        )}`,
+        { scroll: false }
+      );
+    }
   }, [cycles, codeA, codeB]);
 
   // launches two web workers that will run the code and measure it
@@ -99,7 +101,9 @@ export default function CodeComparator() {
     id: string
   ): Promise<{ time: number; output: string[] }> => {
     return new Promise((resolve, reject) => {
-      const worker = new Worker(new URL("../workers/codeRunner.js", import.meta.url));
+      const worker = new Worker(
+        new URL("../workers/codeRunner.js", import.meta.url)
+      );
 
       worker.onerror = reject;
 
