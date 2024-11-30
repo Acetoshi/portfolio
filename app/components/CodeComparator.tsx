@@ -22,6 +22,15 @@ export default function CodeComparator() {
 
   console.log(sortedAndSquaredUsingReduce);`;
 
+  const [winner, setWinner] = useState<number | null>(null);
+
+  const [workingA, setWorkingA] = useState<boolean>(false);
+  const [workingB, setWorkingB] = useState<boolean>(false);
+  const [timeA, setTimeA] = useState<number | null>(null);
+  const [timeB, setTimeB] = useState<number | null>(null);
+  const [consoleOutputA, setConsoleOutputA] = useState<string[]>([]);
+  const [consoleOutputB, setConsoleOutputB] = useState<string[]>([]);
+
   // use the URL to pass arguments to the page
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -29,17 +38,7 @@ export default function CodeComparator() {
 
   const urlIterations = searchParams.get("iterations");
   const urlCodeA = searchParams.get("codeA");
-  const urlCodeB = searchParams.get("codeA");
-
-  const [winner, setWinner] = useState<number | null>(null);
-  const [timeA, setTimeA] = useState<number | null>(null);
-  const [timeB, setTimeB] = useState<number | null>(null);
-
-  const [consoleOutputA, setConsoleOutputA] = useState<string[]>([]);
-
-  const [consoleOutputB, setConsoleOutputB] = useState<string[]>([]);
-  const [workingA, setWorkingA] = useState<boolean>(false);
-  const [workingB, setWorkingB] = useState<boolean>(false);
+  const urlCodeB = searchParams.get("codeB");
   const [cycles, setCycles] = useState<number>(Number(urlIterations) || 1000);
 
   const encode = (code: string): string => {
@@ -49,10 +48,11 @@ export default function CodeComparator() {
   const decode = (code: string | null): string | null => {
     return code === null ? null : decodeURIComponent(code);
   };
-  const [codeA, setCodeA] = useState<string>(decode(urlCodeA) || codeStringA);
-  const [codeB, setCodeB] = useState<string>(codeStringB);
 
-  //This is to store code inside URL parameters, needed to share results
+  const [codeA, setCodeA] = useState<string>(decode(urlCodeA) || codeStringA);
+  const [codeB, setCodeB] = useState<string>(decode(urlCodeB) || codeStringB);
+
+  //This is to store code back into URL parameters, needed to share results
   useEffect(() => {
     if (cycles && codeA && codeB) {
       router.replace(
