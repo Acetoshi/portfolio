@@ -31,7 +31,7 @@ export default function CodeInterface({
   }, [consoleOutput]);
 
   return (
-    <div style={{ width: "48%" }}>
+    <div style={{ width: "100%" }}>
       <h3>Code Block {label}</h3>
       <div className={`${isFaster ? "faster" : ""} ${isSlower ? "slower" : ""} code-block`}>
         <Editor

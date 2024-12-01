@@ -36,7 +36,7 @@
     "url": "https://davidlegall.dev/code-compare",
     "repo_url": "https://github.com/Acetoshi/portfolio/blob/main/app/components/CodeComparator.tsx",
     "description": "Outil d'optimisation de code, permettant d'analyser le temps d'exécution",
-    "tags": ["NextJS", "Web Workers", "Monca Editor", "CSS"]
+    "tags": ["NextJS", "Web Workers", "Monaco Editor", "CSS"]
   },
   {
     "name": "WattMap",
