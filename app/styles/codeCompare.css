@@ -79,7 +79,8 @@
 
 .action-btn:disabled {
   background-color: #424242;
-  cursor:default;
+  opacity: 100%;
+  cursor: default;
 }
 
 select {
@@ -92,10 +93,11 @@ select {
   cursor: pointer;
 }
 
-select:disabled{
+select:disabled {
   background-color: #424242;
-  cursor:default;
+  cursor: default;
   color: var(--primary-color);
+  border-color: black;
 }
 
 .action-btn:hover,
