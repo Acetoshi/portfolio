@@ -148,6 +148,7 @@ export default function CodeComparator() {
         <label htmlFor="iterations">over</label>
         <select
           id="iterations"
+          disabled={workingA || workingB}
           value={cycles}
           onChange={(event) => {
             setCycles(Number(event.target.value));

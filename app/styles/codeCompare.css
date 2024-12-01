@@ -74,6 +74,12 @@
   color: var(--primary-color);
   cursor: pointer;
   font-size: inherit;
+  min-width: 8rem;
+}
+
+.action-btn:disabled {
+  background-color: #424242;
+  cursor:default;
 }
 
 select {
@@ -83,6 +89,13 @@ select {
   border-radius: 8px;
   padding: 4px;
   font-size: inherit;
+  cursor: pointer;
+}
+
+select:disabled{
+  background-color: #424242;
+  cursor:default;
+  color: var(--primary-color);
 }
 
 .action-btn:hover,
