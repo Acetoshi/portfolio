@@ -7,7 +7,7 @@ export default function Skills() {
           <h3>RELATIONNELLES</h3>
           <ul>
             <li>Adaptabilité & Flexibilité</li>
-            <li>Curiosité et Goût pour l'apprentissage</li>
+            <li>{`Curiosité et Goût pour l'apprentissage`}</li>
             <li>Communication assertive</li>
             <li>Résolution de problèmes, Esprit analytique</li>
             <li>Recrutement, Management, Formation</li>
@@ -25,7 +25,6 @@ export default function Skills() {
           <ul>
             <li>HTML, CSS, JavaScript, TypeScript, Python, C++</li>
             <li>ReactJS, Next.js, Express.js, Angular</li>
-
             <li>
               Material UI, LeafletJS, Monaco Editor, GraphQL, JWT, Web Workers
             </li>
