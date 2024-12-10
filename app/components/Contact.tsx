@@ -19,7 +19,7 @@ export default function Contact() {
           </a>
         </li>
         <li>
-          <a href="/CV-DAVID_LE_GALL-Développeur_Web.pdf" target="_blank" download>
+          <a href="/cv-david-le-gall-dev-web.pdf" target="_blank" download>
             MON CV [PDF]
           </a>
         </li>
