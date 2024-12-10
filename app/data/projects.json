@@ -1,8 +1,8 @@
 [
   {
     "name": "First Lego League Ranker",
-    "url": "https://walterwater.app/",
-    "repo_url": "https://github.com/Acetoshi/WalterWater",
+    "url": "https://github.com/Acetoshi/FLL-Ranker-App",
+    "repo_url": "https://github.com/Acetoshi/FLL-Ranker-App",
     "description": "Un outil de gestion de compétitions de robot, gestion de l'organisation des sessions, collecte des notations par les jurys et calcul du classement",
     "tags": [
       "ReactTS",
@@ -17,8 +17,8 @@
   },
   {
     "name": "Walter Water",
-    "url": "https://github.com/Acetoshi/FLL-Ranker-App",
-    "repo_url": "https://github.com/Acetoshi/FLL-Ranker-App",
+    "url": "https://walterwater.app/",
+    "repo_url": "https://github.com/Acetoshi/WalterWater",
     "description": "Une app web et android pour localiser les points d'eau et les toilettes proches partout dans le monde, basée sur les donénes d'Open Street Maps",
     "tags": [
       "ReactJS",
