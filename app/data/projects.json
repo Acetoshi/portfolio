@@ -1,5 +1,36 @@
 [
   {
+    "name": "TCG Trader",
+    "url": "https://github.com/Acetoshi/tcg-trader",
+    "repo_url": "https://github.com/Acetoshi/tcg-trader",
+    "description": "Application d'échange de cartes à collectionner, mettant en relation les utilisateurs en foncitons de leurs offres",
+    "tags": [
+      "Angular",
+      "Material UI",
+      "Python Django",
+      "PostgreSQL",
+      "Docker",
+      "REST API",
+      "JWT"
+    ]
+  },
+  {
+    "name": "Medical Agenda",
+    "url": "https://prod.students-cda-js-3.wilders.dev/",
+    "repo_url": "https://github.com/WildCodeSchool-CDA-FT-2024-09/JS-CDA-Projet-2-Team-C",
+    "description": "Application de gestion de rendez-vous médicaux pour hôpitaux",
+    "tags": [
+      "ReactTS",
+      "Daisy UI",
+      "Tailwind",
+      "GraphQL",
+      "NodeTS",
+      "Apollo Server",
+      "PostgreSQL",
+      "Docker"
+    ]
+  },
+  {
     "name": "First Lego League Ranker",
     "url": "https://github.com/Acetoshi/FLL-Ranker-App",
     "repo_url": "https://github.com/Acetoshi/FLL-Ranker-App",
